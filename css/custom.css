@@ -12,7 +12,7 @@
 
   background:
     linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url("/img/astrae-oratio-wallpaper-02-02.jpg")
+    url("/img/kisaki_kami.jpg")
     center / cover no-repeat;
 
   -webkit-mask-image: linear-gradient(
@@ -48,19 +48,19 @@
 
   background:
     linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url("/img/astrae-oratio-wallpaper-03-01.jpg")
+    url("/img/yuruko_reading.jpg")
     center / cover no-repeat;
 
   -webkit-mask-image: linear-gradient(
     to bottom,
     black 0%,
-    black 75%,
+    black 85%,
     transparent 100%
   );
   mask-image: linear-gradient(
     to bottom,
     black 0%,
-    black 75%,
+    black 85%,
     transparent 100%
   );
 }
@@ -89,4 +89,16 @@
 /* 增加文字对比度 */
 #footer .footer-other {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* 首页头图优先显示图片顶部 */
+#page-header.full_page::before {
+  background-position: center top;
+}
+/* 文章页头图：使用指定图片，并从顶部对齐 */
+#page-header.post-bg::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("/img/kisaki_kami.jpg");
+  background-position: center top;
 }
