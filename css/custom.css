@@ -1,0 +1,92 @@
+/* 文章头图：底部渐隐，露出网站背景 */
+#page-header.post-bg {
+  background: transparent !important;
+}
+
+/* 用独立图层显示头图，避免标题一起变透明 */
+#page-header.post-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("/img/astrae-oratio-wallpaper-02-02.jpg")
+    center / cover no-repeat;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 65%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 65%,
+    transparent 100%
+  );
+}
+
+
+/* 标题和文章信息显示在图片上方 */
+#page-header.post-bg #post-info {
+  z-index: 1;
+}
+
+/* 首页头图：底部渐隐 */
+#page-header.full_page {
+  background: transparent !important;
+}
+
+#page-header.full_page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("/img/astrae-oratio-wallpaper-03-01.jpg")
+    center / cover no-repeat;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 75%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 75%,
+    transparent 100%
+  );
+}
+
+/* 保持首页标题和向下箭头清晰、可点击 */
+#page-header.full_page #site-info,
+#page-header.full_page #scroll-down {
+  z-index: 1;
+}
+
+/* 页脚：从透明逐渐过渡到蓝色 */
+#footer {
+  background: linear-gradient(
+    to bottom,
+    rgba(73, 177, 245, 0) 0%,
+    rgba(73, 177, 245, 0.5) 45%,
+    rgba(73, 177, 245, 1) 100%
+  ) !important;
+}
+
+/* 避免主题遮罩影响渐变 */
+#footer::before {
+  display: none;
+}
+
+/* 增加文字对比度 */
+#footer .footer-other {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
