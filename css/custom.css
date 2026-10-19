@@ -102,3 +102,110 @@
     url("/img/kisaki_kami.jpg");
   background-position: center top;
 }
+
+
+/* 手机竖屏：首页头图优先保留右侧人物 */
+@media (max-width: 768px) and (orientation: portrait) {
+  #page-header.full_page::before {
+    background-position: 75% top;
+  }
+}
+
+
+/* 首页文章卡片：标题 */
+#recent-posts .recent-post-item > .recent-post-info > .article-title {
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+/* 首页文章卡片：预览文字 */
+#recent-posts .recent-post-item > .recent-post-info > .content {
+  font-size: 16px;
+  line-height: 1.8;
+  -webkit-line-clamp: 3;
+}
+
+
+/* 正文：字体、字号和行距 */
+#post #article-container {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* 一级标题，对应 Markdown 的 # */
+#post #article-container h1 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* 二级标题，对应 Markdown 的 ## */
+#post #article-container h2 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* 三级标题，对应 Markdown 的 ### */
+#post #article-container h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* 段落之间的距离 */
+#post #article-container p {
+  margin-bottom: 18px;
+}
+
+/* 列表项之间的距离 */
+#post #article-container li {
+  margin-bottom: 6px;
+}
+
+/* 引用块，对应 Markdown 的 > */
+#post #article-container blockquote {
+  font-size: 16px;
+  padding: 12px 16px;
+}
+
+/* 加粗文字，对应 Markdown 的 **文字** */
+#post #article-container strong {
+  font-weight: 700;
+}
+
+/* 文章头图上的标题 */
+#post-info .post-title {
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "Microsoft YaHei", "Yu Gothic", sans-serif;
+  line-height: 1.5;
+}
+
+/* 小屏幕上的标题 */
+@media (max-width: 768px) {
+  #post-info .post-title {
+    font-size: 28px;
+  }
+}
+
+
+/* 常规字重 */
+/*@font-face {
+  font-family: "MyBlogFont";
+  src: url("/fonts/my-font-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}*/
+
+/* 粗体字重 */
+/*@font-face {
+  font-family: "MyBlogFont";
+  src: url("/fonts/my-font-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}*/
